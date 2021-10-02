@@ -1,23 +1,15 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const createReadMe = require("./utils/generateMarkdown.js");
+const {
+  generateMarkdown,
+  tableOfCont,
+} = require("./utils/generateMarkdown.js");
+const path = require("path");
 
 // TODO: Create an array of questions for user input
 const questions = () => {
   return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is your name? (Required)",
-      validate: (nameInput) => {
-        if (nameInput) {
-          return true;
-        } else {
-          console.log("Please enter your name!");
-        }
-      },
-    },
     {
       type: "input",
       name: "title",
@@ -31,6 +23,19 @@ const questions = () => {
       },
     },
     {
+      type: "input",
+      name: "name",
+      message: "What is your name? (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter your name!");
+        }
+      },
+    },
+    //Table of contents is hardcoded
+    {
       type: "confirm",
       name: "confirmBrief",
       message: "Would you like to enter a project brief?",
@@ -43,21 +48,14 @@ const questions = () => {
         "Provide a short description of the project; goals, language(s) you will use, etc.",
       when: ({ confirmBrief }) => confirmBrief,
     },
-    //!Need to destructure this list .filter
-    {
-      type: "confirm",
-      name: "confirmList",
-      message: "Would you like to build a checklist for the README?",
-      default: true,
-    },
+    //!Has a .filter to separate values.
+
     {
       type: "input",
       name: "list",
       message:
         "Please type the list items for your README, separate each item with a semicolon",
-      when: ({ confirmList }) => confirmList,
     },
-    //End
     {
       type: "input",
       name: "installation",
@@ -71,45 +69,62 @@ const questions = () => {
         }
       },
     },
-    //!This section will require assets/images with an upload ability
+    {
+      type: "input",
+      name: "usage",
+      message:
+        "Please provide usage instructions, if none, please state it (Required)",
+      validate: (installationInput) => {
+        if (installationInput) {
+          return true;
+        } else {
+          console.log("Please provide usage instructions!");
+        }
+      },
+    },
+    //!This section will require assets/images with an upload ability currently an image is saved to the foler
     {
       type: "confirm",
       name: "confirmScreenshots",
-      message: "Would you like to upload screenshot of the application?",
+      message:
+        "Would you like to upload screenshot of the application? (include the file type i.e. .png .jpg)",
       default: false,
     },
     {
       type: "input",
       name: "screenshots",
-      message:
-        "Provide a short description of the project; goals, language(s) you will use, etc.",
+      message: 'Please type "image.jpg" to see the image',
       when: ({ confirmScreenshots }) => confirmScreenshots,
     },
     {
       type: "input",
       name: "credits",
-      message: "List any collaborators, if any: ",
+      message: "List any collaborators, if any:",
     },
     {
-      type: "input",
+      type: "checkbox",
       name: "license",
-      message: "List any collaborators, if any: ",
+      mesage: "Select a license for the project:",
+      choices: ["MIT", "APACHE", "GNU", "BSD3"],
     },
   ]);
 };
 
-questions().then((readmeData) => {
-  console.log(readmeData);
-  const list = readmeData.list.split(";");
-  console.log(list);
-  return createReadMe(readmeData);
-}).then;
+questions()
+  .then((readmeData) => {
+    console.log(readmeData);
+    const splitList = readmeData.list.split(";");
+    console.log(splitList);
+    writeToFile("readme.md", generateMarkdown(readmeData, splitList));
+  })
+  .catch((err) => {
+    if (err) {
+      throw err;
+    }
+  });
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+function writeToFile(filename, readmeData) {
+  console.log(filename, readmeData);
+  return fs.writeFileSync(path.join(process.cwd(), filename), readmeData);
+}

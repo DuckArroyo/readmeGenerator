@@ -10,11 +10,12 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+//!I replaced data with readmeData
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
+const generateMarkdown = (readmeData) => {
+  return;
+  ` ${readmeData.name}
+  # ${readmeData.title}`;
+};
 
 module.exports = generateMarkdown;

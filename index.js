@@ -114,10 +114,33 @@ const questions = () => {
       message: "List any collaborators, if any:",
     },
     {
+      type: "input",
+      name: "features",
+      message: "List any features, if any:",
+    },
+    {
+      type: "input",
+      name: "contributions",
+      message: "List any Contributions, if any:",
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "List any Tests, if any:",
+    },
+    {
       type: "checkbox",
       name: "license",
       mesage: "Select a license for the project:",
       choices: ["MIT", "APACHE", "GNU", "BSD3", "None"],
+      validate: (licenseInput) => {
+        if (licenseInput) {
+          return true;
+        } else {
+          console.log("Please select one license");
+          return false;
+        }
+      },
     },
   ]);
 };
@@ -127,11 +150,8 @@ questions()
     console.log(readmeData);
     const splitList = readmeData.list.split(";");
     console.log(splitList);
-    // const splitLicense = readmeData.license.split(",");
-    // console.log(splitLicense);
     writeToFile("readme.md", generateMarkdown(readmeData, splitList));
   })
-
   .catch((err) => {
     if (err) {
       throw err;

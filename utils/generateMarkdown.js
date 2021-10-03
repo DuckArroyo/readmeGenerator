@@ -1,23 +1,27 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+//!
+//TODO figure out badge
 
-//dynamically grab the item to populate the badge
-// MIT, APACHE, GNU BSD3 - are common licenses
-//https://img.shields.io/badge/%3CLABEL%3E-%3CMESSAGE%3E-%3CCOLOR%3E
-//${readmeData.license}
-//![APM](https://img.shields.io/apm/l/MIT?style=for-the-badge)
+const badge = function (readmeData) {
+  if (!readmeData.license) {
+    return "";
+  }
+  let badger = "";
+  if (readmeData.license === "MIT") {
+    badged = `![Licensed: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+  } else if (readmeData.license === "APACHE") {
+    badged = `![Licensed: APACHE](https://img.shields.io/badge/License-APACHE-blue.svg)`;
+  } else if (readmeData.license === "GNU") {
+    badged = `![Licensed: GNU](https://img.shields.io/badge/License-GNU-brightgreen.svg)`;
+  } else if (readmeData.license === "BSD3") {
+    badged = `![Licensed: BSD3](https://img.shields.io/badge/License-BSD3-ultraviolet.svg)`;
+  } else if (readmeData.license === "None") {
+    badged = `![Licensed: None](https://img.shields.io/badge/License-None-red.svg)`;
+  } else {
+    ("No license available");
+  }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink() {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection() {}
-
-//!https://img.shields.io/badge/%3CLABEL%3E-%3CMESSAGE%3E-%3CCOLOR%3E
-//!https://img.shields.io/badge/<3CLABEL>-<MESSAGE>-<CCOLOR>
+  return badger;
+};
 
 const tableOfCont = (splitList) => {
   let string = ``;
@@ -29,12 +33,12 @@ const tableOfCont = (splitList) => {
   return string;
 };
 
-const generateMarkdown = (readmeData, splitList) => {
+const generateMarkdown = (readmeData, splitList, badger) => {
   return `
-  ## ${readmeData.title};
+  ## ${readmeData.title}
   
   ### Created by: ${readmeData.name}
-  <a href="https://github.com/${readmeData.github}">GitHub:${
+  <a href="https://github.com/${readmeData.github}">GitHub: ${
     readmeData.github
   } </a>
 
@@ -57,10 +61,9 @@ const generateMarkdown = (readmeData, splitList) => {
   ${readmeData.credits}
   
   ## License
-  <a href="https://img.shields.io/badge/<LABEL>-<MESSAGE>-<CCOLOR>></a>
-  ${readmeData.license}
-  ![APM](https://img.shields.io/apm/l/MIT?style=for-the-badge)
-
+  ${badge(badger)}
+  (https://img.shields.io/badge/license-${readmeData.license}-red.svg)
+  
   ## Screenshot
   <img src="./assets/${readmeData.screenshots}">
 `;

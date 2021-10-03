@@ -1,39 +1,37 @@
+## tested
 
-  ## jythrgefw;
-  
-  ### Created by: ujyhtgrfe
-  <a href="https://github.com/Duckarroyo">GitHub</a>
+### Created by: re
 
-  ## Brief
-  undefined
+<a href="https://github.com/DuckArroyo">GitHub: DuckArroyo </a>
 
-  * [To_do](#To_do)
-  * [Installation](#installation)
-  * [Screenshot(s)](#screenshot)
-  * [Credits](#credits)
-  * [License](#license)
+## Brief
 
-  ## To do list
-  
-    * License badges
-    
-    * features
-    
-    *  contributing
-    
-    * tests
-    
+undefined
 
-  ## Installation
-  ujyhtgerf
-  
-  ## Credits
-  yrhtgefw
-  
-  ## License
-  <a href="https://img.shields.io/badge/<LABEL>-<MESSAGE>-<CCOLOR>></a>
-  MIT
-  ![APM](https://img.shields.io/apm/l/MIT?style=for-the-badge)
+- [To_do](#To_do)
+- [Installation](#installation)
+- [Screenshot(s)](#screenshot)
+- [Credits](#credits)
+- [License](#license)
 
-  ## Screenshot
+## To do list
+
+    * rtegrfwed
+
+## Installation
+
+rhtgefw
+
+## Credits
+
+tgrefwe
+
+## License
+
+MIT
+![badge](https://img.shields.io/badge/license-MIT-red.svg)
+![Licensed: GNU](https://img.shields.io/badge/License-GNU-brightgreen.svg)
+
+## Screenshot
+
   <img src="./assets/undefined">

@@ -4,15 +4,15 @@ const badge = function (license) {
   }
   let badger = "";
   if (license === "MIT") {
-    badged = `![Licensed: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+    badger = `![Licensed: MIT](https://img.shields.io/badge/License-MIT-critical)`;
   } else if (readmeData.license === "APACHE") {
-    badged = `![Licensed: APACHE](https://img.shields.io/badge/License-APACHE-blue.svg)`;
+    badger = `![Licensed: APACHE](https://img.shields.io/badge/License-APACHE-informational)`;
   } else if (readmeData.license === "GNU") {
-    badged = `![Licensed: GNU](https://img.shields.io/badge/License-GNU-brightgreen.svg)`;
+    badger = `![Licensed: GNU](https://img.shields.io/badge/License-GNU-success)`;
   } else if (readmeData.license === "BSD3") {
-    badged = `![Licensed: BSD3](https://img.shields.io/badge/License-BSD3-ultraviolet.svg)`;
+    badger = `![Licensed: BSD3](https://img.shields.io/badge/License-BSD3-blueviolet)`;
   } else if (readmeData.license === "None") {
-    badged = `![Licensed: None](https://img.shields.io/badge/License-None-red.svg)`;
+    badger = `![Licensed: None](https://img.shields.io/badge/License-None-inactive)`;
   } else {
     ("No license available");
   }
@@ -39,37 +39,48 @@ const generateMarkdown = (readmeData, splitList, badger) => {
     readmeData.github
   } </a>
 
-  ## Brief
-  ${readmeData.brief}
-
-  * [To_do](#To_do)
-  * [Installation](#installation)
-  * [Screenshot(s)](#screenshot)
-  * [Credits](#credits)
-  * [License](#license)
-
   ## To do list
   ${tableOfCont(splitList)}
 
+  ## Brief
+  ${readmeData.brief}
+
+  ## Table of contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Features](#features)
+  * [Contributions](#contributions)
+  * [Tests](#tests)
+  * [License](#license)
+  * [Screenshot(s)](#screenshot)
+
   ## Installation
   ${readmeData.installation}
+
+  ## Usage
+  ${readmeData.usage}
   
   ## Credits
   ${readmeData.credits}
+
+  ## Features
+  ${readmeData.features}
+
+  ## Contributions
+  ${readmeData.contributions}
+
+  ## Tests
+  ${readmeData.tests}
   
   ## License
-
-  ${badge(badger)}
+  ${badge(badger)} 
   ![License: ${readmeData.license}](https://img.shields.io/badge/license-${
     readmeData.license
-  }-red.svg)
-
-  ![License: ${readmeData.license}](https://img.shields.io/badge/license-${
-    readmeData.license
-  }-red.svg)
+  }-critical)
   
   ## Screenshot
-  <img src="./assets/${readmeData.screenshots}">
+  <img src="./assets/${readmeData.screenshots}.jpg">
 `;
 };
 

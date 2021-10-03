@@ -47,13 +47,6 @@ const questions = () => {
         }
       },
     },
-    //Table of contents is hardcoded
-    {
-      type: "input",
-      name: "brief",
-      message:
-        "Provide a short description of the project; goals, language(s) you will use, etc.",
-    },
     //!Has a .filter to separate values.
     {
       type: "input",
@@ -61,6 +54,13 @@ const questions = () => {
       message:
         "Please type the list items for your README, separate each item with a semicolon",
     },
+    {
+      type: "input",
+      name: "brief",
+      message:
+        "Provide a short description of the project; goals, language(s) you will use, etc.",
+    },
+    //Table of contents is hardcoded
     {
       type: "input",
       name: "installation",
@@ -79,27 +79,13 @@ const questions = () => {
       name: "usage",
       message:
         "Please provide usage instructions, if none, please state it (Required)",
-      validate: (installationInput) => {
-        if (installationInput) {
+      validate: (usageInput) => {
+        if (usageInput) {
           return true;
         } else {
           console.log("Please provide usage instructions!");
         }
       },
-    },
-    //!This section will require assets/images with an upload ability currently an image is saved to the foler
-    {
-      type: "confirm",
-      name: "confirmScreenshots",
-      message:
-        "Would you like to upload screenshot of the application? (include the file type i.e. .png .jpg)",
-      default: false,
-    },
-    {
-      type: "input",
-      name: "screenshots",
-      message: 'Please type "image.jpg" to see the image',
-      when: ({ confirmScreenshots }) => confirmScreenshots,
     },
     {
       type: "input",
@@ -135,6 +121,20 @@ const questions = () => {
         }
       },
     },
+    //!This section will require assets/images with an upload ability currently an image is saved to the foler
+    {
+      type: "confirm",
+      name: "confirmScreenshots",
+      message: "Would you like to upload screenshot of the application?",
+      default: false,
+    },
+    {
+      type: "input",
+      name: "screenshots",
+      message:
+        'Please type "image1, image2, image3, or image4" to see an image',
+      when: ({ confirmScreenshots }) => confirmScreenshots,
+    },
   ]);
 };
 
@@ -153,6 +153,6 @@ questions()
 
 // TODO: Create a function to write README file
 function writeToFile(filename, readmeData) {
-  //console.log(filename, readmeData);
+  console.log(filename, readmeData);
   return fs.writeFileSync(path.join(process.cwd(), filename), readmeData);
 }

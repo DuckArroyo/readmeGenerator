@@ -1,12 +1,9 @@
-//!
-//TODO figure out badge
-
-const badge = function (readmeData) {
-  if (!readmeData.license) {
+const badge = function (license) {
+  if (!license) {
     return "";
   }
   let badger = "";
-  if (readmeData.license === "MIT") {
+  if (license === "MIT") {
     badged = `![Licensed: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
   } else if (readmeData.license === "APACHE") {
     badged = `![Licensed: APACHE](https://img.shields.io/badge/License-APACHE-blue.svg)`;
@@ -61,8 +58,15 @@ const generateMarkdown = (readmeData, splitList, badger) => {
   ${readmeData.credits}
   
   ## License
+
   ${badge(badger)}
-  (https://img.shields.io/badge/license-${readmeData.license}-red.svg)
+  ![License: ${readmeData.license}](https://img.shields.io/badge/license-${
+    readmeData.license
+  }-red.svg)
+
+  ![License: ${readmeData.license}](https://img.shields.io/badge/license-${
+    readmeData.license
+  }-red.svg)
   
   ## Screenshot
   <img src="./assets/${readmeData.screenshots}">

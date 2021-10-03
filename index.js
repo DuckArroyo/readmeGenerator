@@ -49,17 +49,10 @@ const questions = () => {
     },
     //Table of contents is hardcoded
     {
-      type: "confirm",
-      name: "confirmBrief",
-      message: "Would you like to enter a project brief?",
-      default: true,
-    },
-    {
       type: "input",
       name: "brief",
       message:
         "Provide a short description of the project; goals, language(s) you will use, etc.",
-      when: ({ confirmBrief }) => confirmBrief,
     },
     //!Has a .filter to separate values.
     {
@@ -160,6 +153,6 @@ questions()
 
 // TODO: Create a function to write README file
 function writeToFile(filename, readmeData) {
-  console.log(filename, readmeData);
+  //console.log(filename, readmeData);
   return fs.writeFileSync(path.join(process.cwd(), filename), readmeData);
 }

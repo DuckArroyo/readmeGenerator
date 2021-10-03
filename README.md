@@ -1,33 +1,39 @@
 
-  ## hrtgefwe;
-  Created by: htregrwfe
-
+  ## jythrgefw;
+  
+  ### Created by: ujyhtgrfe
+  <a href="https://github.com/Duckarroyo">GitHub</a>
 
   ## Brief
-  yhrtgerwfe
+  undefined
 
   * [To_do](#To_do)
   * [Installation](#installation)
   * [Screenshot(s)](#screenshot)
   * [Credits](#credits)
-  * [License](#license)<--Need to create this->
+  * [License](#license)
 
-  ## To do list <--This loop works-->
+  ## To do list
   
-    * htgrfe
+    * License badges
     
-    * rthegrfw
+    * features
     
-    * htgerfw
+    *  contributing
+    
+    * tests
     
 
   ## Installation
-  thgerfwe
-
+  ujyhtgerf
+  
+  ## Credits
+  yrhtgefw
+  
+  ## License
+  <a href="https://img.shields.io/badge/<LABEL>-<MESSAGE>-<CCOLOR>></a>
+  MIT
+  ![APM](https://img.shields.io/apm/l/MIT?style=for-the-badge)
 
   ## Screenshot
   <img src="./assets/undefined">
-  
-  ## Credits
-  thegr
-

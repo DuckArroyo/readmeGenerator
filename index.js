@@ -34,6 +34,19 @@ const questions = () => {
         }
       },
     },
+    {
+      type: "input",
+      name: "github",
+      message: "Enter your GitHub Username: (Required)",
+      validate: (githubInput) => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log("Please enter your GitHub username");
+          return false;
+        }
+      },
+    },
     //Table of contents is hardcoded
     {
       type: "confirm",
@@ -49,7 +62,6 @@ const questions = () => {
       when: ({ confirmBrief }) => confirmBrief,
     },
     //!Has a .filter to separate values.
-
     {
       type: "input",
       name: "list",
@@ -105,7 +117,7 @@ const questions = () => {
       type: "checkbox",
       name: "license",
       mesage: "Select a license for the project:",
-      choices: ["MIT", "APACHE", "GNU", "BSD3"],
+      choices: ["MIT", "APACHE", "GNU", "BSD3", "None"],
     },
   ]);
 };
@@ -115,8 +127,11 @@ questions()
     console.log(readmeData);
     const splitList = readmeData.list.split(";");
     console.log(splitList);
+    // const splitLicense = readmeData.license.split(",");
+    // console.log(splitLicense);
     writeToFile("readme.md", generateMarkdown(readmeData, splitList));
   })
+
   .catch((err) => {
     if (err) {
       throw err;

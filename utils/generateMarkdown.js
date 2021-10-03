@@ -5,17 +5,19 @@ function renderLicenseBadge(license) {}
 //dynamically grab the item to populate the badge
 // MIT, APACHE, GNU BSD3 - are common licenses
 //https://img.shields.io/badge/%3CLABEL%3E-%3CMESSAGE%3E-%3CCOLOR%3E
+//${readmeData.license}
+//![APM](https://img.shields.io/apm/l/MIT?style=for-the-badge)
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink() {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection() {}
 
-//!I replaced data with readmeData
-// TODO: Create a function to generate markdown for README
+//!https://img.shields.io/badge/%3CLABEL%3E-%3CMESSAGE%3E-%3CCOLOR%3E
+//!https://img.shields.io/badge/<3CLABEL>-<MESSAGE>-<CCOLOR>
 
 const tableOfCont = (splitList) => {
   let string = ``;
@@ -30,8 +32,11 @@ const tableOfCont = (splitList) => {
 const generateMarkdown = (readmeData, splitList) => {
   return `
   ## ${readmeData.title};
-  Created by: ${readmeData.name}
-
+  
+  ### Created by: ${readmeData.name}
+  <a href="https://github.com/${readmeData.github}">GitHub:${
+    readmeData.github
+  } </a>
 
   ## Brief
   ${readmeData.brief}
@@ -40,21 +45,24 @@ const generateMarkdown = (readmeData, splitList) => {
   * [Installation](#installation)
   * [Screenshot(s)](#screenshot)
   * [Credits](#credits)
-  * [License](#license)<--Need to create this->
+  * [License](#license)
 
-  ## To do list <--This loop works-->
+  ## To do list
   ${tableOfCont(splitList)}
 
   ## Installation
   ${readmeData.installation}
-
-
-  ## Screenshot
-  <img src="./assets/${readmeData.screenshots}">
   
   ## Credits
   ${readmeData.credits}
+  
+  ## License
+  <a href="https://img.shields.io/badge/<LABEL>-<MESSAGE>-<CCOLOR>></a>
+  ${readmeData.license}
+  ![APM](https://img.shields.io/apm/l/MIT?style=for-the-badge)
 
+  ## Screenshot
+  <img src="./assets/${readmeData.screenshots}">
 `;
 };
 

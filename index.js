@@ -151,7 +151,6 @@ questions()
     }
   });
 
-// TODO: Create a function to write README file
 function writeToFile(filename, readmeData) {
   console.log(filename, readmeData);
   return fs.writeFileSync(path.join(process.cwd(), filename), readmeData);

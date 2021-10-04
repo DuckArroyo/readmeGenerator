@@ -8,6 +8,7 @@
 
 - Make video
 - Turn in the project
+- Video link https://watch.screencastify.com/v/OpmpcMLFOS9A7nBdPxMO
 
 ## Brief
 

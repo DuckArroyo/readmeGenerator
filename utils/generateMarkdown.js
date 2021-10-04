@@ -80,7 +80,7 @@ const generateMarkdown = (readmeData, splitList, badger) => {
   }-critical)
   
   ## Screenshot
-  <img src="../assets/${readmeData.screenshots}.jpg">
+  <img src="./assets/${readmeData.screenshots}.jpg">
 `;
 };
 

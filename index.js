@@ -152,6 +152,5 @@ questions()
   });
 
 function writeToFile(filename, readmeData) {
-  console.log(filename, readmeData);
   return fs.writeFileSync(path.join(process.cwd(), filename), readmeData);
 }

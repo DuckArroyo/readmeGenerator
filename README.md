@@ -54,6 +54,8 @@ Each iteration of the form will overwrite the previous entry.
 
 ![License: NONE](https://img.shields.io/badge/license-NONE-critical)
 
-## Screenshot
+## Screenshots
 
-  <img src="../assets/image4.jpg">
+<img src="./assets/">
+
+<img src="./assets/image4.jpg">

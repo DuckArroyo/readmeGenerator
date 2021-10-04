@@ -56,6 +56,6 @@ Each iteration of the form will overwrite the previous entry.
 
 ## Screenshots
 
-<img src="./assets/">
+<img src="./assets/Screenshot.jpg">
 
 <img src="./assets/image4.jpg">

@@ -1,61 +1,47 @@
-## README generator
 
-### Created by: Rafael Arroyo
+  ## etgrfwedwq
+  
+  ### Created by: egrfwdq
+  <a href="https://github.com/ergfwdq">GitHub: ergfwdq </a>
 
-<a href="https://github.com/DuckArroyo">GitHub: DuckArroyo </a>
+  ## To do list
+  
+    * wfedq
+    
 
-## To do list
+  ## Brief
+  ergfwdq
 
-- Make video
-- Turn in the project
-- Video link https://watch.screencastify.com/v/OpmpcMLFOS9A7nBdPxMO
+  ## Table of contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Features](#features)
+  * [Contributions](#contributions)
+  * [Tests](#tests)
+  * [License](#license)
+  * [Screenshot(s)](#screenshot)
 
-## Brief
+  ## Installation
+  rgefwdq
 
-This project is a README generator. It functions through the command line with the command "node index"
-The command line will ask the user for the content they wish to list in the file.
+  ## Usage
+  ergfw
+  
+  ## Credits
+  
 
-## Table of contents
+  ## Features
+  
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [Features](#features)
-- [Contributions](#contributions)
-- [Tests](#tests)
-- [License](#license)
-- [Screenshot(s)](#screenshot)
+  ## Contributions
+  
 
-## Installation
-
-Duplicate the repository to your own machine or github account.
-The application requires npm, fs, and Inquirer.js to work.
-
-FS and Inquirer should be listed in the package-lock.json under the dependencies
-Caveat, the Inquirer installation will download node_modules which is a large folder thus a gitinore is included in the files to prevent a github upload.
-
-## Usage
-
-Open use. This is a student project.
-
-## Credits
-
-## Features
-
-## Contributions
-
-## Tests
-
-To Test the application initiate the command line with "node index"
-Answer the prompts as needed.
-Each iteration of the form will overwrite the previous entry.
-
-## License
-
-![License: NONE](https://img.shields.io/badge/license-NONE-critical)
-
-## Screenshots
-
-<img src="./assets/Screenshot.jpg">
-
-<img src="./assets/image4.jpg">
+  ## Tests
+  
+  
+  ## License
+  ![Licensed: MIT](https://img.shields.io/badge/License-MIT-critical) 
+  
+  ## Screenshot
+  <img src="./assets/undefined.jpg">

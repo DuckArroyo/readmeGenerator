@@ -1,24 +1,26 @@
-const badge = function (license) {
+function badge(license) {
+  console.log("license line 1", license);
   if (!license) {
     return "";
   }
   let badger = "";
-  if (license === "MIT") {
+  if (license.includes("MIT")) {
     badger = `![Licensed: MIT](https://img.shields.io/badge/License-MIT-critical)`;
-  } else if (readmeData.license === "APACHE") {
+  } else if (license.includes("APACHE")) {
     badger = `![Licensed: APACHE](https://img.shields.io/badge/License-APACHE-informational)`;
-  } else if (readmeData.license === "GNU") {
+  } else if (license.includes("GNU")) {
     badger = `![Licensed: GNU](https://img.shields.io/badge/License-GNU-success)`;
-  } else if (readmeData.license === "BSD3") {
+  } else if (license.includes("BSD3")) {
     badger = `![Licensed: BSD3](https://img.shields.io/badge/License-BSD3-blueviolet)`;
-  } else if (readmeData.license === "None") {
+  } else if (license.includes("None")) {
     badger = `![Licensed: None](https://img.shields.io/badge/License-None-inactive)`;
   } else {
-    ("No license available");
+    console.log("Didnt match any licenses");
   }
-
+  console.log("license", license);
+  console.log("Badger", badger);
   return badger;
-};
+}
 
 const tableOfCont = (splitList) => {
   let string = ``;
@@ -74,10 +76,7 @@ const generateMarkdown = (readmeData, splitList, badger) => {
   ${readmeData.tests}
   
   ## License
-  ${badge(badger)} 
-  ![License: ${readmeData.license}](https://img.shields.io/badge/license-${
-    readmeData.license
-  }-critical)
+  ${badge(readmeData.license)} 
   
   ## Screenshot
   <img src="./assets/${readmeData.screenshots}.jpg">

@@ -1,14 +1,30 @@
-## README generator
+## README generator  ![GitHublicense](https://img.shields.io/npm/l/express?style=for-the-badge)
 
-### Created by: Rafael Arroyo
+## UO Coding bootcamp Challenge 9
 
-<a href="https://github.com/DuckArroyo">GitHub: DuckArroyo </a>
+## Links
 
-## To do list
+This project does not have a live page.
 
-- Make video
-- Turn in the project
-- Video link https://watch.screencastify.com/v/OpmpcMLFOS9A7nBdPxMO
+Github Repository [Link](https://github.com/DuckArroyo/challenge9)
+
+## Description
+
+This is a command line README generator. The project uses Node.js to prompt the user on a step by step process that will generate the README into the dist folder.
+
+## Project Guidelines/Requirements
+
+npm - npm install
+
+inquirer - npm install inquirer
+
+## The commandments
+
+node index.js
+
+## Demo video
+
+Video [link](https://watch.screencastify.com/v/OpmpcMLFOS9A7nBdPxMO)
 
 ## Brief
 
@@ -42,7 +58,19 @@ Open use. This is a student project.
 
 ## Features
 
-## Contributions
+# Contributions by:
+
+DeveloperDuckArroyo
+
+[Portfolio](https://duckarroyo.github.io/challenge2/)
+
+[GitHub](https://github.com/DuckArroyo)
+
+[Twitter @DevDuckArroyo](https://twitter.com/DevDuckArroyo)
+
+[LinkeIn](https://www.linkedin.com/in/duckarroyo/)
+
+[CodePen](https://codepen.io/DeveloperDuckArroyo)
 
 ## Tests
 

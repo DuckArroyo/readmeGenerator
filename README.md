@@ -89,6 +89,6 @@ Each iteration of the form will overwrite the previous entry.
 
 ## Screenshots
 
-<img src="./assets/Screenshot.jpg" style="width: 400px">
+<img src="./assets/Screenshot.jpg">
 
 <img src="./assets/image4.jpg" style="width: 200px">

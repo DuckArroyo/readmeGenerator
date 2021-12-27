@@ -87,10 +87,6 @@ To Test the application initiate the command line with "node index"
 Answer the prompts as needed.
 Each iteration of the form will overwrite the previous entry.
 
-## License
-
-![License: NONE](https://img.shields.io/badge/license-NONE-critical)
-
 ## Screenshots
 
 <img src="./assets/Screenshot.jpg">

@@ -11,7 +11,7 @@ UO Coding bootcamp Challenge 9
 
 This project does not have a live page.
 
-Github Repository [Link](https://github.com/DuckArroyo/readmeGenerator)
+[Github Repository](https://github.com/DuckArroyo/readmeGenerator)
 
 ## Description
 

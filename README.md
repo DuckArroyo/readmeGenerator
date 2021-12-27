@@ -1,12 +1,17 @@
-## README generator  ![GitHublicense](https://img.shields.io/npm/l/express?style=for-the-badge)
+## README generator  
 
-## UO Coding bootcamp Challenge 9
+![GitHublicense](https://img.shields.io/npm/l/express?style=for-the-badge)
+
+## UO Coding bootcamp Challenge
+
+UO Coding bootcamp Challenge 9
+
 
 ## Links
 
 This project does not have a live page.
 
-Github Repository [Link](https://github.com/DuckArroyo/challenge9)
+Github Repository [Link](https://github.com/DuckArroyo/readmeGenerator)
 
 ## Description
 
@@ -62,13 +67,17 @@ Open use. This is a student project.
 
 DeveloperDuckArroyo
 
-[Portfolio](https://duckarroyo.github.io/challenge2/)
+[Email](mailto:DeveloperDuckArroyo@gmail.com)
+
+[Portfolio](https://github.com/DuckArroyo/portfolio)
+
+[React Portfolio](http://DuckArroyo.github.io/reactPortfolio)
 
 [GitHub](https://github.com/DuckArroyo)
 
 [Twitter @DevDuckArroyo](https://twitter.com/DevDuckArroyo)
 
-[LinkeIn](https://www.linkedin.com/in/duckarroyo/)
+[LinkeIn](https://www.linkedin.com/in/duckarroyo)
 
 [CodePen](https://codepen.io/DeveloperDuckArroyo)
 

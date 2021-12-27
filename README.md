@@ -29,7 +29,7 @@ node index.js
 
 ## Demo video
 
-Video [link](https://watch.screencastify.com/v/OpmpcMLFOS9A7nBdPxMO)
+[Walkthrough Video](https://watch.screencastify.com/v/OpmpcMLFOS9A7nBdPxMO)
 
 ## Brief
 
